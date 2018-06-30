@@ -4,7 +4,7 @@ Create Table Parts
 
 (
 ID int IDENTITY(1,1) NOT NULL primary key,
-SubCategoryID AS 'P' + RIGHT('000000' + CAST(ID AS VARCHAR(10)), 6) PERSISTED,
+PartID AS 'P' + RIGHT('000000' + CAST(ID AS VARCHAR(10)), 6) PERSISTED,
 PartName nvarchar(100) NOT NULL,
 PartDescription nvarchar NOT NULL,
 UnitPrice decimal (12,2) NOT NULL,
