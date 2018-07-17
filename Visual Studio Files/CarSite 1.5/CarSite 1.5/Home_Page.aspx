@@ -1,21 +1,17 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home_Page.aspx.cs" Inherits="CarSite_1._5.Home_Page" %>
+
 <!DOCTYPE html>
-<!-- 
-Template Name: Impel Car Dealer Responsive HTML Template
-Version: 1.0.0
-Author: Kamleshyadav
-Website: http://himanshusofttech.com/
-Purchase: http://themeforest.net/user/kamleshyadav
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
+
 <html lang="en">
 <!--<![endif]-->
 <!-- Begin Head -->
-
-<head>
+<head runat="server">
     <title>Impel Car Dealer Responsive HTML Template</title>
     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="Impel">
     <meta name="keywords" content="">
@@ -39,7 +35,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
 
 <body>
   
-
+    <form id="form1" runat="server"/>
     <!------ Header Start ------>
     <div class="impl_header_wrapper impl_home_wrapper">
         <div class="impl_top_header">
@@ -211,7 +207,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="impl_logo">
-                            <a href="index.html"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
+                            <a href="Home_Page.aspx"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
                         </div>
                         <button class="impl_menu_btn">
 			<i class="fa fa-car" aria-hidden="true"></i>
@@ -299,8 +295,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
 							<option value="b4">Type 4</option>
 						</select>
                                 <div class="price_range">
-                                    <label>price range</label> <input type="text" id="range_24" name="ionRangeSlider" value="" />
-                                </div>
+                                                                   </div>
                                 <div class="impl_search_btn">
                                     <button class="impl_btn">Search Part</button>
                                 </div>
@@ -308,74 +303,31 @@ Purchase: http://themeforest.net/user/kamleshyadav
                         </div>
                         <!--about info-->
                         <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="impl_facility_wrapper">
-                                        <img src="http://via.placeholder.com/312x218" alt="" class="home.aspx" />
-                                        <div class="impl_ser_hover_ovrly">
-                                            <div class="impl_ser_text">
-                                                <img src="key.svg" alt="key" />
-                                                <h3>purchase</h3>
-                                            </div>
-                                            <div class="impl_ser_text_ovrly">
-                                                <img src="key.svg" alt="key" />
-                                                <h3>purchase</h3>
-                                                <p>At vero eos et accusamus etiusto odio dignissimos ducimus qui blanditiis.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="impl_facility_wrapper">
-                                        <img src="http://via.placeholder.com/312x218" alt="" class="img-fluid" />
-                                        <div class="impl_ser_hover_ovrly">
-                                            <div class="impl_ser_text">
-                                                <img src="images/svg/doller.svg" alt="doller" />
-                                                <h3>sell</h3>
-                                            </div>
-                                            <div class="impl_ser_text_ovrly">
-                                                <img src="images/svg/doller.svg" alt="doller" />
-                                                <h3>purchase</h3>
-                                                <p>At vero eos et accusamus etiusto odio dignissimos ducimus qui blanditiis.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="impl_facility_wrapper">
-                                        <img src="http://via.placeholder.com/312x218" alt="" class="img-fluid" />
-                                        <div class="impl_ser_hover_ovrly">
-                                            <div class="impl_ser_text">
-                                                <img src="images/svg/car.svg" alt="car" />
-                                                <h3>purchase</h3>
-                                            </div>
-                                            <div class="impl_ser_text_ovrly">
-                                                <img src="images/svg/car.svg" alt="car" />
-                                                <h3>purchase</h3>
-                                                <p>At vero eos et accusamus etiusto odio dignissimos ducimus qui blanditiis.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="impl_facility_wrapper">
-                                        <img src="http://via.placeholder.com/312x218" alt="" class="img-fluid" />
-                                        <div class="impl_ser_hover_ovrly">
-                                            <div class="impl_ser_text">
-                                                <img src="images/svg/insurance_car.svg" alt="car" />
-                                                <h3>purchase</h3>
-                                            </div>
-                                            <div class="impl_ser_text_ovrly">
-                                                <img src="images/svg/insurance_car.svg" alt="car" />
-                                                <h3>purchase</h3>
-                                                <p>At vero eos et accusamus etiusto odio dignissimos ducimus qui blanditiis.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           <!--------->
+                          
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                     <!-- Wrapper for slides -->
+                     <div class="carousel-inner">
+                     <div class="item active">
+                     <img src="repair_your_car_2.jpg" alt="Scrap" style="width:600px; height:420px">
+                    </div>
+                     <div class="item">
+                
+                           <img src="repair_your_car_3.jpg" alt="Scrap" style="width:600px; height:420px">
+                   </div>
+    
+                    <div class="item">
+                   <img src="car_repair.png" alt="Scrap" style="width:600px; height:420px">
                         </div>
                     </div>
+  
+                            </div>
+                        </div>
+
+                            <!-------->
+                                  
+                         </div>
+              
                 </div>
             </div>
         </div>
@@ -623,7 +575,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                         </div>
                         <div class="impl_count_text">
                             <h1 class="count-no" data-to="8210" data-speed="10000">8210</h1>
-                            <p>Cars in stock</p>
+                            <p>Parts in stock</p>
                         </div>
                     </div>
                 </div>
@@ -633,7 +585,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                             <img src="trophy.svg" alt="" />
                         </div>
                         <div class="impl_count_text">
-                            <h1 class="count-no" data-to="686" data-speed="10000">686</h1>
+                            <h1 class="count-no" data-to="66" data-speed="10000">686</h1>
                             <p>awards</p>
                         </div>
                     </div>
@@ -843,3 +795,6 @@ Purchase: http://themeforest.net/user/kamleshyadav
 </body>
 
 </html>
+
+
+
