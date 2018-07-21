@@ -416,13 +416,13 @@ button:focus {
 .impl_logo {
     float: left;
     width: auto;
-    height: 122px;
-    background-color: #151515;
+   
+    background-color: #f15b5b;
     padding: 0px 176px 0px 80px;
     position: absolute;
     left: 0;
-    top: 0;
-    line-height: 120px;
+    top: 6px;
+    line-height: 10px;
     -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 81% 100%, 0% 100%);
 }
@@ -5507,8 +5507,10 @@ label.compare_check_label {
     .impl_logo {
         width: 100%;
         padding-top: 15px;
+        padding-bottom:15px;
         padding-left: 0px;
         text-align: center;
+        
     }
     .impl_header_time {
         margin: 0px 20px;
@@ -6988,7 +6990,7 @@ label.compare_check_label {
 	width:200px;
 	height:120px;
 	content:"";
-	background-color:#151515;
+	background-color:#f15b5b;
 	z-index:-1;
 	right:-56px;
 	transform:skew(-40deg);

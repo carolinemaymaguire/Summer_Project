@@ -1,14 +1,24 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home_Page.aspx.cs" Inherits="CarSite_1._5.Home_Page" %>
 
 <!DOCTYPE html>
-
+<!-- 
+Template Name: Impel Car Dealer Responsive HTML Template
+Version: 1.0.0
+Author: Kamleshyadav
+Website: http://himanshusofttech.com/
+Purchase: http://themeforest.net/user/kamleshyadav
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
 <html lang="en">
 <!--<![endif]-->
 <!-- Begin Head -->
+
 <head runat="server">
     <title>Impel Car Dealer Responsive HTML Template</title>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -34,8 +44,8 @@
 </head>
 
 <body>
-  
-    <form id="form1" runat="server"/>
+   <form id="form1" runat="server">
+
     <!------ Header Start ------>
     <div class="impl_header_wrapper impl_home_wrapper">
         <div class="impl_top_header">
@@ -207,7 +217,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="impl_logo">
-                            <a href="Home_Page.aspx"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
+                            <a href="home_page.aspx"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
                         </div>
                         <button class="impl_menu_btn">
 			<i class="fa fa-car" aria-hidden="true"></i>
@@ -252,74 +262,47 @@
                         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="impl_search_box   custom_select">
                                 <h1>Find a Part</h1>
-                                <select>
-							<option>Select Brand</option>
-							<option value="1">Brand 1</option>
-							<option value="2">Brand 2</option>
-							<option value="3">Brand 3</option>
-							<option value="4">Brand 4</option>
-						</select>
-                                <select>
-							<option>Select Status</option>
-							<option value="b1">Status 1</option>
-							<option value="b2">Status 2</option>
-							<option value="b3">Status 3</option>
-							<option value="b4">Status 4</option>
-						</select>
-                                <select>
-							<option>Select Model</option>
-							<option value="b1">Model 1</option>
-							<option value="b2">Model 2</option>
-							<option value="b3">Model 3</option>
-							<option value="b4">Model 4</option>
-						</select>
-                                <select>
-							<option>Select Year</option>
-							<option value="b1">Year 1</option>
-							<option value="b2">Year 2</option>
-							<option value="b3">Year 3</option>
-							<option value="b4">Year 4</option>
-						</select>
-                                <select>
-							<option>Select Color</option>
-							<option value="b1">Color 1</option>
-							<option value="b2">Color 2</option>
-							<option value="b3">Color 3</option>
-							<option value="b4">Color 4</option>
-						</select>
-                                <select>
-							<option>Select Type</option>
-							<option value="b1">Type 1</option>
-							<option value="b2">Type 2</option>
-							<option value="b3">Type 3</option>
-							<option value="b4">Type 4</option>
-						</select>
+                          <asp:DropDownList ID="ddlMake" runat="server" DataSourceID="SqlDataSource1" DataTextField="Vehicle_Make" DataValueField="Vehicle_Make" AutoPostBack="True">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [Vehicle_Make] FROM [Model]"></asp:SqlDataSource>
+                                <asp:DropDownList ID="ddlModel" runat="server" DataSourceID="SqlDataSource2" DataTextField="Vehicle_Model" DataValueField="Vehicle_Model" AutoPostBack="True"></asp:DropDownList>
+
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [Vehicle_Model] FROM [Model] WHERE ([Vehicle_Make] = @Vehicle_Make)">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="ddlMake" Name="Vehicle_Make" PropertyName="SelectedValue" Type="String" />
+                                    </SelectParameters>
+							  </asp:SqlDataSource>
+                                <asp:DropDownList ID="ddlEngine"  runat="server" DataSourceID="datasrcEngine" DataTextField="Engine" DataValueField="Engine" AppendDataBoundItems="True" AutoPostBack="True" EnableViewState="False">
+                                     <asp:ListItem Text="Select Engine"></asp:ListItem>
+                                </asp:DropDownList>
+                               
+                                <asp:SqlDataSource ID="datasrcEngine" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Engine] FROM [Model] WHERE ([Vehicle_Model] = @Vehicle_Model)">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="ddlModel" Name="Vehicle_Model" PropertyName="SelectedValue" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+						
                                 <div class="price_range">
-                                                                   </div>
+                                    <label>price range</label> <input type="text" id="range_24" name="ionRangeSlider" value="" />
+                                </div>
                                 <div class="impl_search_btn">
                                     <button class="impl_btn">Search Part</button>
                                 </div>
                             </div>
                         </div>
                         <!--about info-->
-                        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                           <!--------->
-                          
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
                      <!-- Wrapper for slides -->
                      <div class="carousel-inner">
                      <div class="item active">
-                     <img src="repair_your_car_2.jpg" alt="Scrap" style="width:600px; height:420px">
+                     <img src="spanner_image.jpg" alt="Scrap" style="width:600px; height:410px">
                     </div>
                      <div class="item">
                 
-                           <img src="repair_your_car_3.jpg" alt="Scrap" style="width:600px; height:420px">
+                           <img src="carrepair_cm.jpg" alt="Scrap" style="width:600px; height:410px">
                    </div>
     
-                    <div class="item">
-                   <img src="car_repair.png" alt="Scrap" style="width:600px; height:420px">
-                        </div>
-                    </div>
+                   
   
                             </div>
                         </div>
@@ -335,7 +318,8 @@
     <!------ Service and Video Wrapper Start ------>
     <div class="impl_service_wrapper impl_faq_wrapper">
         <div class="impl_service_video">
-            <div class="impl_video_inner">
+            <div class="impl_video_inner"><embed width="952" height="621"
+src="https://www.youtube.com/embed/BqjuObIH1nY" />
                 <div class="impl_servdo_video">
                     <span class="impl_play_icon"><a class="impl-popup-youtube" href="https://www.youtube.com/watch?v=BqjuObIH1nY"><i class="fa fa-play" aria-hidden="true"></i></a></span>
                 </div>
@@ -575,7 +559,7 @@
                         </div>
                         <div class="impl_count_text">
                             <h1 class="count-no" data-to="8210" data-speed="10000">8210</h1>
-                            <p>Parts in stock</p>
+                            <p>Cars in stock</p>
                         </div>
                     </div>
                 </div>
@@ -585,7 +569,7 @@
                             <img src="trophy.svg" alt="" />
                         </div>
                         <div class="impl_count_text">
-                            <h1 class="count-no" data-to="66" data-speed="10000">686</h1>
+                            <h1 class="count-no" data-to="686" data-speed="10000">686</h1>
                             <p>awards</p>
                         </div>
                     </div>
@@ -629,7 +613,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-12">
                                 <div class="impl_post_img">
-                                    <img src="http://via.placeholder.com/370x303" alt="" class="img-fluid" />
+                                    <img src="christmas.jpg" alt="" class="img-fluid" />
                                     <span class="impl_pst_date">
 									16 sep
 								</span>
@@ -638,7 +622,7 @@
                             </div>
                             <div class="col-lg-8 col-md-12">
                                 <div class="impl_post_data">
-                                    <h2><a href="blog_left_sidebar.html">Stories Behind Car Brand Names </a></h2>
+                                    <h2><a href="blog_left_sidebar.html">Staying Safe On The Road This Christmas </a></h2>
                                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). There are many variations of passages of Lorem Ipsum available</p>
                                     <div class="impl_pst_info">
                                         <div class="impl_pst_admin">
@@ -791,10 +775,9 @@
     <script type="text/javascript" src="jquery.nice-select.min.js"></script>
     <script type="text/javascript" src="tweenmax.js"></script>
     <script type="text/javascript" src="custom.js"></script>
-    <!--Main js file End-->
+    <!--Main js file End--></form>
 </body>
 
 </html>
-
 
 
