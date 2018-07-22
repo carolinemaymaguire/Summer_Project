@@ -16,7 +16,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
 <!-- Begin Head -->
 
 <head runat="server">
-    <title>Impel Car Dealer Responsive HTML Template</title>
+    <title>Impel Scrap Parts</title>
     <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -109,10 +109,9 @@ Purchase: http://themeforest.net/user/kamleshyadav
                             <div class="impl_search_overlay">
                                 <div class="impl_search_area">
                                     <div class="srch_inner">
-                                        <form action="#">
+                                        </div>
                                             <input type="text" placeholder="Search here... ">
                                             <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                        </form>
                                         <div class="srch_close_btn">
                                             <span class="srch_close_btn_icon"><i class="fa fa-times" aria-hidden="true"></i></span>
                                         </div>
@@ -234,15 +233,13 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </div>
                                     <ul>
-                                                                  <li><a href="service.html">services</a></li>
-                                        <li class="dropdown"><a href="javascript:;">blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog_left_sidebar.html">blog left sidebar</a></li>
-                                                <li><a href="blog_right_sidebar.html">blog right sidebar</a></li>
-                                                <li><a href="blog_single.html">blog single</a></li>
-                                            </ul>
+                                                                  <li><a href="services.html">services</a></li>
+                                        <li><a href="blog.aspx">blog</a>
+                                         
                                         </li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                         <li><a href="about.aspx">About</a></li>
+
+                                        <li><a href="contact.asx">Contact us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -251,7 +248,6 @@ Purchase: http://themeforest.net/user/kamleshyadav
                 </div>
             </div>
         </div>
-    </div>
   
     <!------ Search Box Start ------>
     <div class="impl_searchbox_wrapper impl_home_searchbox">
@@ -262,31 +258,52 @@ Purchase: http://themeforest.net/user/kamleshyadav
                         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="impl_search_box   custom_select">
                                 <h1>Find a Part</h1>
-                          <asp:DropDownList ID="ddlMake" runat="server" DataSourceID="SqlDataSource1" DataTextField="Vehicle_Make" DataValueField="Vehicle_Make" AutoPostBack="True">
-                                    </asp:DropDownList>
-                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [Vehicle_Make] FROM [Model]"></asp:SqlDataSource>
-                                <asp:DropDownList ID="ddlModel" runat="server" DataSourceID="SqlDataSource2" DataTextField="Vehicle_Model" DataValueField="Vehicle_Model" AutoPostBack="True"></asp:DropDownList>
-
-                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [Vehicle_Model] FROM [Model] WHERE ([Vehicle_Make] = @Vehicle_Make)">
+                         
+                                <asp:DropDownList ID="ddlMake" runat="server" AutoPostBack="True" DataSourceID="datasrcMake" DataTextField="Vehicle_Make" DataValueField="Vehicle_Make"></asp:DropDownList>
+                                <asp:SqlDataSource ID="datasrcMake" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Vehicle_Make] FROM [Model]"></asp:SqlDataSource>
+                                <asp:DropDownList ID="ddlModel" runat="server" DataSourceID="datasrcModel" DataTextField="Vehicle_Model" DataValueField="Vehicle_Model" AutoPostBack="True"></asp:DropDownList>
+                                
+                                <asp:SqlDataSource ID="datasrcModel" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Vehicle_Model] FROM [Model] WHERE ([Vehicle_Make] = @Vehicle_Make)">
                                     <SelectParameters>
                                         <asp:ControlParameter ControlID="ddlMake" Name="Vehicle_Make" PropertyName="SelectedValue" Type="String" />
                                     </SelectParameters>
-							  </asp:SqlDataSource>
-                                <asp:DropDownList ID="ddlEngine"  runat="server" DataSourceID="datasrcEngine" DataTextField="Engine" DataValueField="Engine" AppendDataBoundItems="True" AutoPostBack="True" EnableViewState="False">
-                                     <asp:ListItem Text="Select Engine"></asp:ListItem>
-                                </asp:DropDownList>
-                               
-                                <asp:SqlDataSource ID="datasrcEngine" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Engine] FROM [Model] WHERE ([Vehicle_Model] = @Vehicle_Model)">
+                                </asp:SqlDataSource>
+                                <asp:DropDownList ID="ddlEngine" runat="server" DataSourceID="SqlDataSource1" DataTextField="Engine" DataValueField="Engine" AutoPostBack="True"></asp:DropDownList>
+                                
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [Engine] FROM [Model] WHERE ([Vehicle_Model] = @Vehicle_Model2)">
                                     <SelectParameters>
-                                        <asp:ControlParameter ControlID="ddlModel" Name="Vehicle_Model" PropertyName="SelectedValue" Type="String" />
+                                        <asp:ControlParameter ControlID="ddlModel" Name="Vehicle_Model2" PropertyName="SelectedValue" Type="String" />
                                     </SelectParameters>
                                 </asp:SqlDataSource>
-						
+                                <asp:DropDownList ID="ddlYear" runat="server" DataSourceID="datasrcYear" DataTextField="Vehicle_Year" DataValueField="Vehicle_Year" AutoPostBack="True"></asp:DropDownList>
+                                
+                                <asp:SqlDataSource ID="datasrcYear" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Vehicle_Year] FROM [Model] WHERE (([Vehicle_Model] = @Vehicle_Model) AND ([Engine] = @Engine))">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="ddlModel" Name="Vehicle_Model" PropertyName="SelectedValue" Type="String" />
+                                        <asp:ControlParameter ControlID="ddlEngine" Name="Engine" PropertyName="SelectedValue" Type="Decimal" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                <asp:DropDownList ID="ddlTransmission" runat="server" DataSourceID="datasrcTransmission" DataTextField="Transmission" DataValueField="Transmission" AutoPostBack="True"></asp:DropDownList>
+                                <asp:SqlDataSource ID="datasrcTransmission" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [Transmission] FROM [Model] WHERE (([Vehicle_Model] = @Vehicle_Model) AND ([Engine] = @Engine) AND ([Vehicle_Year] = @Vehicle_Year))">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="ddlModel" Name="Vehicle_Model" PropertyName="SelectedValue" Type="String" />
+                                        <asp:ControlParameter ControlID="ddlEngine" Name="Engine" PropertyName="SelectedValue" Type="Decimal" />
+                                        <asp:ControlParameter ControlID="ddlYear" Name="Vehicle_Year" PropertyName="SelectedValue" Type="Int16" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                <asp:DropDownList ID="ddlFueltype" runat="server" AutoPostBack="True" DataSourceID="datasrcFuelType" DataTextField="Fuel_Type" DataValueField="Fuel_Type"></asp:DropDownList>
+                                <asp:SqlDataSource ID="datasrcFuelType" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Fuel_Type] FROM [Model] WHERE (([Transmission] = @Transmission) AND ([Vehicle_Model] = @Vehicle_Model) AND ([Vehicle_Year] = @Vehicle_Year))">
+                                    <SelectParameters>
+                                        <asp:ControlParameter ControlID="ddlTransmission" Name="Transmission" PropertyName="SelectedValue" Type="String" />
+                                        <asp:ControlParameter ControlID="ddlModel" Name="Vehicle_Model" PropertyName="SelectedValue" Type="String" />
+                                        <asp:ControlParameter ControlID="ddlYear" Name="Vehicle_Year" PropertyName="SelectedValue" Type="Int16" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                                 <div class="price_range">
-                                    <label>price range</label> <input type="text" id="range_24" name="ionRangeSlider" value="" />
-                                </div>
+                                                                   </div>
                                 <div class="impl_search_btn">
-                                    <button class="impl_btn">Search Part</button>
+                                    <span class="impl_btn">
+                                    <asp:Button ID="btnSearch" Cssclass="impl_btn" runat="server" Text="Search Part" /></span>
                                 </div>
                             </div>
                         </div>
@@ -295,11 +312,11 @@ Purchase: http://themeforest.net/user/kamleshyadav
                      <!-- Wrapper for slides -->
                      <div class="carousel-inner">
                      <div class="item active">
-                     <img src="spanner_image.jpg" alt="Scrap" style="width:600px; height:410px">
+                     <img src="spanner_image.jpg" alt="Scrap" style="width:600px; height:420px">
                     </div>
                      <div class="item">
                 
-                           <img src="carrepair_cm.jpg" alt="Scrap" style="width:600px; height:410px">
+                           <img src="carrepair_cm.jpg" alt="Scrap" style="width:600px; height:420px">
                    </div>
     
                    
@@ -315,6 +332,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
             </div>
         </div>
     </div>
+    </form>
     <!------ Service and Video Wrapper Start ------>
     <div class="impl_service_wrapper impl_faq_wrapper">
         <div class="impl_service_video">

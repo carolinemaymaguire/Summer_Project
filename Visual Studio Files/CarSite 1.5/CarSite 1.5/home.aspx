@@ -302,7 +302,8 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                     <label>price range</label> <input type="text" id="range_24" name="ionRangeSlider" value="" />
                                 </div>
                                 <div class="impl_search_btn">
-                                    <button class="impl_btn">Search Part</button>
+                                    
+                                    <asp:Button ID="Button1"class="impl_btn" runat="server" Text="Button" />
                                 </div>
                             </div>
                         </div>
