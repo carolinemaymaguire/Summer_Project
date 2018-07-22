@@ -52,7 +52,7 @@
                           
                           
                             <ul class="impl_header_icons">
-                                <li class="impl_search"><span><i class="fa fa-search" aria-hidden="true"></i></span></li>
+                               
                                 <li class="cart-popup"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                                     <!--sopping cart box-->
                                     <div class="cart-box">

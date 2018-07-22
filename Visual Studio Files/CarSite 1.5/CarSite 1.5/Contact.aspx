@@ -51,7 +51,7 @@
                           
                           
                             <ul class="impl_header_icons">
-                                <li class="impl_search"><span><i class="fa fa-search" aria-hidden="true"></i></span></li>
+                               
                                 <li class="cart-popup"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                                     <!--sopping cart box-->
                                     <div class="cart-box">
@@ -216,7 +216,7 @@
                             <div class="impl_logo_responsive">
                                 <a href="index.html"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
                             </div>
-                            <a href="sell_step.html" class="impl_btn">Sell your car</a>
+                           
                             <div class="impl_menu">
                                 <nav>
                                     <div class="menu_cross">

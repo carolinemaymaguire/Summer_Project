@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="CarSite_1._5.About" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="CarSite_1._5.checkout" %>
 
 <!DOCTYPE html>
 
@@ -52,7 +52,7 @@
                           
                           
                             <ul class="impl_header_icons">
-                              
+                             
                                 <li class="cart-popup"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                                     <!--sopping cart box-->
                                     <div class="cart-box">
@@ -225,8 +225,7 @@
                                     </div>
                                     <ul>
                                                                   <li><a href="services.aspx">services</a></li>
-                                        <li><a href="blog.aspx">Blog</a></li>
-                                       
+                                     <li><a href="blog.aspx">Blog</a></li>
                                          <li><a href="about.aspx">About</a></li>
 
                                         <li><a href="contact.aspx">Contact us</a></li>
@@ -237,193 +236,188 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
        
     <!------ Breadcrumbs Start ------>
     <div class="impl_bread_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <h1>company</h1>
+                    <h1>checkout</h1>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">company</li>
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">checkout</li>
                     </ol>
                 </div>
             </div>
         </div>
     </div>
-    <!------ About our company Start ------>
-    <div class="impl_about_wrapper">
+    <!------ Sell wrapper  Start ------>
+    <div class="impl_sell_wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="impl_heading">
-                        <h1>who we are</h1>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="impl_about_data">
-                        <h2>A Bit About Us</h2>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now. Use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized .</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="impl_progress_wrapper">
-                        <div class="barWrapper">
-                            <span class="progressText">Customers</span>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 40%;">
-                                    <div class="progress-value">5410</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barWrapper">
-                            <span class="progressText">Purchases</span>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 60%;">
-                                    <div class="progress-value">8612</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barWrapper">
-                            <span class="progressText">Sales</span>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 80%;">
-                                    <div class="progress-value">9782</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barWrapper">
-                            <span class="progressText">REpairs</span>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 60%;">
-                                    <div class="progress-value">6450</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barWrapper">
-                            <span class="progressText">Vehicles Stock</span>
-                            <div class="progress">
-                                <div class="progress-bar" style="width: 90%;">
-                                    <div class="progress-value">6450</div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-10 col-md-12 offset-lg-1">
+                    <div class="impl_checkout_wrapper" id="impl_sform">
+                        <ul id="step_progressbar">
+                            <li class="active"><span>cart</span></li>
+                            <li><span>Delivery</span></li>
+                            <li><span>Payment</span></li>
+                            <li><span>Receipt</span></li>
+                        </ul>
+                        <div class="impl_step">
+                            <div class="woocommerce">
+                                <form>
+                                    <table class="table table-bordered shop_table cart">
+										<thead>
+											<tr>
+												<th>Image</th>
+												<th>Name</th>
+												<th>Color</th>
+												<th>Status</th>
+												<th>Cost</th>
+												<th>Remove</th>
+											</tr>
+											<tr>
+												<td><a href="#"><img src="http://via.placeholder.com/100x100" alt=""></a></td>
+												<td>Expedition , Centaur</td>
+												<td>White</td>
+												<td>In Stock</td>
+												<td>$81000</td>
+												<td><span class="cart_rmv_icon"><i class="fa fa-times" aria-hidden="true"></i></span></td>
+											</tr>
+										</thead>
+                                    </table>
+                                    <div class="impl_cart_footer">
+                                        <div class="impl_footer_subs">
+                                            <input type="text" class="form-control" placeholder="Enter Promotional Code Here">
+                                            <button class="foo_subs_btn">APPLY</button>
+                                        </div>
+                                        <div class="cart-subtotals">
+                                            <div class="total-line">
+                                                <span class="label">Subtotal</span>
+                                                <span class="value price">$81000</span>
+                                            </div>
+                                            <div class="total-line">
+                                                <span class="label">VAT</span>
+                                                <span class="value price">+ $1000</span>
+                                            </div>
+                                            <div class="total-line">
+                                                <span class="label">Discounts</span>
+                                                <span class="value price">- $1000</span>
+                                            </div>
+                                            <div class="total-line total_amount">
+                                                <span class="label">total cost</span>
+                                                <span class="value price">$81000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!------ History Section Start ------>
-    <div class="impl_history_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="impl_heading">
-                        <h1>our history</h1>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                    <div class="impl_hstry_timeline">
-                        <div class="impl_timeline_wrapper">
-                            <ul class="impl_timeline">
-                                <li>
-                                    <div class="impl_tl_item">
-                                        <h2>2001</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majorty have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
-                                        </p>
-                                        <span class="impl_tl_icon">
-											<span class="impl_tl_dot"></span>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="impl_tl_item impl_tl_item_rt">
-                                        <h2>2004</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majorty have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                                        <span class="impl_tl_icon">
-											<span class="impl_tl_dot"></span>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="impl_tl_item">
-                                        <h2>2011</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majorty have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                                        <span class="impl_tl_icon">
-											<span class="impl_tl_dot"></span>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="impl_tl_item impl_tl_item_rt">
-                                        <h2>2017</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majorty have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                                        <span class="impl_tl_icon">
-											<span class="impl_tl_dot"></span>
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
+                            </div>
+                            <button type="button" name="next" class="next action-button impl_btn" value="Next" > next</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!------ Testimonial Section Start ------>
-    <div class="impl_test_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="impl_heading">
-                        <h1>words of satisfaction</h1>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                    <div class="impl_test_slider">
-                        <div class="item">
-                            <div class="impl_test_slider_box">
-                                <div class="impl_test_data">
-                                    <div class="impl_test_img">
-                                        <img src="http://via.placeholder.com/270x256" alt="" />
+                        <!--second step-->
+                        <div class="impl_step">
+                            <h2 class="step-title">Shipping Details</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" placeholder="YOUR NAME*">
                                     </div>
-                                    <p><span class="impl_test_quote"><img src="images/svg/quotes.svg" alt=""></span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. . All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                    <div class="impl_test_footer">
-                                        - Grant Allison
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="number" class="form-control" placeholder="YOUR MOBILE*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="email" class="form-control" placeholder="YOUR EMAIL*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="company" class="form-control" placeholder="COMPANY">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group form-group-txtarea">
+                                        <textarea name="address" class="form-control" placeholder="ADDRESS*"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="city" class="form-control" placeholder="CITY">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="state" class="form-control" placeholder="STATE">
                                     </div>
                                 </div>
                             </div>
+                            <button type="button" name="next" class="next action-button impl_btn" value="Next" > next</button>
                         </div>
-                        <!--2-->
-                        <div class="item">
-                            <div class="impl_test_slider_box">
-                                <div class="impl_test_data">
-                                    <div class="impl_test_img">
-                                        <img src="http://via.placeholder.com/270x256" alt="" />
+                        <!--third step-->
+                        <div class="impl_step impl_pay_wrapper">
+                            <div class="row">
+								<div class="col-lg-8 offset-lg-2">
+                                <div class="impl_card_type form-group">
+                                    <label class="radio_control control_radio">Debit Card
+								  <input type="radio" name="radio" checked="checked"/>
+								  <span class="control_indicator"></span>
+								</label>
+                                    <label class="radio_control control_radio">Credit Card
+								  <input type="radio" name="radio"/>
+								  <span class="control_indicator"></span>
+								</label>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="h_name" class="form-control" placeholder="CARD HOLDER'S NAME">
                                     </div>
-                                    <p><span class="impl_test_quote"><img src="images/svg/quotes.svg" alt=""></span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. . All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                    <div class="impl_test_footer">
-                                        - Aaron Green
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="card_no" class="form-control" placeholder="CARD NUMBER">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="s_code" class="form-control" placeholder="SECURITY CODE">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <div class="pay_select_box custom_select">
+                                            <label>EXPIRY DATE</label>
+                                            <select>
+								  <option data-display="01">01</option>
+								  <option value="1">02</option>
+								  <option value="2">03</option>
+								  <option value="3">04</option>
+								  <option value="4">05</option>
+								</select>
+                                            <select>
+								  <option data-display="2017">2017</option>
+								  <option value="1">2018</option>
+								  <option value="2">2019</option>
+								  <option value="3">2020</option>
+								  <option value="4">2021</option>
+								</select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+							</div>
+                            <button type="button" name="next" class="next action-button impl_btn" value="Next" > Pay</button>
+
                         </div>
-                        <!--3-->
-                        <div class="item">
-                            <div class="impl_test_slider_box">
-                                <div class="impl_test_data">
-                                    <div class="impl_test_img">
-                                        <img src="http://via.placeholder.com/270x256" alt="" />
-                                    </div>
-                                    <p><span class="impl_test_quote"><img src="images/svg/quotes.svg" alt=""></span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. . All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                    <div class="impl_test_footer">
-                                        - Raul Valdez
-                                    </div>
-                                </div>
-                            </div>
+                        <!--fourth step-->
+                        <div class="impl_step impl_print_rcpt">
+                            <h1>Thank You For Your Order !</h1>
+                            <p>" On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue. “</p>
+                            <button type="button" name="next" class="impl_btn">Print REceipt</button>
                         </div>
                     </div>
                 </div>
@@ -524,8 +518,11 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/popper.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
     <script type="text/javascript" src="js/plugin/magnific/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/step.js"></script>
+    <script type="text/javascript" src="js/plugin/nice_select/jquery.nice-select.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <!--Main js file End-->
     </form>

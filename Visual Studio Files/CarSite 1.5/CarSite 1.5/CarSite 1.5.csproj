@@ -96,6 +96,7 @@
     <Content Include="carrepaircm1.jpg" />
     <Content Include="carrepair_cm.jpg" />
     <Content Include="car_repair.png" />
+    <Content Include="checkout.aspx" />
     <Content Include="christmas.jpg" />
     <Content Include="Contact.aspx" />
     <Content Include="Home_Page.aspx" />
@@ -106,6 +107,7 @@
     <Content Include="repair_your_car_2.jpg" />
     <Content Include="repair_your_car_3.jpg" />
     <Content Include="scrap_car.png" />
+    <Content Include="SearchResults.aspx" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="services.aspx" />
     <Content Include="spanner_image.jpg" />
@@ -182,6 +184,13 @@
     <Compile Include="Blog.aspx.designer.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
     </Compile>
+    <Compile Include="checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +212,13 @@
     </Compile>
     <Compile Include="Purchase.aspx.designer.cs">
       <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="services.aspx.cs">
       <DependentUpon>services.aspx</DependentUpon>

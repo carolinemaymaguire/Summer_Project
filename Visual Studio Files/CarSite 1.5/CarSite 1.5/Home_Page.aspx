@@ -61,7 +61,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                             </ul>
                           
                             <ul class="impl_header_icons">
-                                <li class="impl_search"><span><i class="fa fa-search" aria-hidden="true"></i></span></li>
+                               
                                 <li class="cart-popup"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                                     <!--sopping cart box-->
                                     <div class="cart-box">
@@ -97,8 +97,8 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                                 <div class="price-s">$5100.0</div>
                                             </div>
                                             <div class="cart-buttons">
-                                                <a href="checkout.html" class="btn impl_btn">View Cart</a>
-                                                <a href="checkout.html" class="btn impl_btn">Checkout</a>
+                                                <a href="checkout.aspx" class="btn impl_btn">View Cart</a>
+                                              
                                                 <div class="clear"></div>
                                             </div>
                                         </div>
@@ -226,20 +226,20 @@ Purchase: http://themeforest.net/user/kamleshyadav
                             <div class="impl_logo_responsive">
                                 <a href="index.html"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
                             </div>
-                            <a href="sell_step.html" class="impl_btn">Sell your car</a>
+                            
                             <div class="impl_menu">
                                 <nav>
                                     <div class="menu_cross">
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </div>
                                     <ul>
-                                                                  <li><a href="services.html">services</a></li>
+                                                                  <li><a href="services.aspx">services</a></li>
                                         <li><a href="blog.aspx">blog</a>
                                          
                                         </li>
                                          <li><a href="about.aspx">About</a></li>
 
-                                        <li><a href="contact.asx">Contact us</a></li>
+                                        <li><a href="contact.aspx">Contact us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -303,7 +303,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                                                    </div>
                                 <div class="impl_search_btn">
                                     <span class="impl_btn">
-                                    <asp:Button ID="btnSearch" Cssclass="impl_btn" runat="server" Text="Search Part" /></span>
+                                    <asp:Button ID="btnSearch" Cssclass="impl_btn" runat="server" Text="Search Part" OnClick="btnSearch_Click" /></span>
                                 </div>
                             </div>
                         </div>
@@ -405,167 +405,7 @@ src="https://www.youtube.com/embed/BqjuObIH1nY" />
             </div>
         </div>
     </div>
-    <!------ Featured Cars Start ------>
-    <div class="impl_featured_wrappar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="impl_heading">
-                        <h1>Featured Cars</h1>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="impl_fea_car_box">
-                        <div class="impl_fea_car_img">
-                            <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                            <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                            <span class="impl_img_tag" title="compare"><i class="fa fa-exchange" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="impl_fea_car_data">
-                            <h2><a href="purchase_new.html">Aurora</a></h2>
-                            <ul>
-                                <li><span class="impl_fea_title">model</span>
-                                    <span class="impl_fea_name">Aurora 811</span></li>
-                                <li><span class="impl_fea_title">Vehicle Status</span>
-                                    <span class="impl_fea_name">new</span></li>
-                                <li><span class="impl_fea_title">Color</span>
-                                    <span class="impl_fea_name">white</span></li>
-                            </ul>
-                            <div class="impl_fea_btn">
-                                <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--2-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="impl_fea_car_box">
-                        <div class="impl_fea_car_img">
-                            <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                            <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                            <span class="impl_img_tag" title="compare"><i class="fa fa-exchange" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="impl_fea_car_data">
-                            <h2> <a href="purchase_new.html">Serpent</a></h2>
-                            <ul>
-                                <li><span class="impl_fea_title">model</span>
-                                    <span class="impl_fea_name">Serpent 16.6 </span></li>
-                                <li><span class="impl_fea_title">Vehicle Status</span>
-                                    <span class="impl_fea_name">new</span></li>
-                                <li><span class="impl_fea_title">Color</span>
-                                    <span class="impl_fea_name">blue</span></li>
-                            </ul>
-                            <div class="impl_fea_btn">
-                                <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--3-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="impl_fea_car_box">
-                        <div class="impl_fea_car_img">
-                            <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                            <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                            <span class="impl_img_tag" title="compare"><i class="fa fa-exchange" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="impl_fea_car_data">
-                            <h2><a href="purchase_new.html">Basilisk</a></h2>
-                            <ul>
-                                <li><span class="impl_fea_title">model</span>
-                                    <span class="impl_fea_name">Basilisk 811</span></li>
-                                <li><span class="impl_fea_title">Vehicle Status</span>
-                                    <span class="impl_fea_name">new</span></li>
-                                <li><span class="impl_fea_title">Color</span>
-                                    <span class="impl_fea_name">white</span></li>
-                            </ul>
-                            <div class="impl_fea_btn">
-                                <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--4-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="impl_fea_car_box">
-                        <div class="impl_fea_car_img">
-                            <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                            <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                            <span class="impl_img_tag" title="compare"><i class="fa fa-exchange" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="impl_fea_car_data">
-                            <h2><a href="purchase_used.html">Mirage</a></h2>
-                            <ul>
-                                <li><span class="impl_fea_title">model</span>
-                                    <span class="impl_fea_name">Mirage</span></li>
-                                <li><span class="impl_fea_title">Vehicle Status</span>
-                                    <span class="impl_fea_name">old</span></li>
-                                <li><span class="impl_fea_title">year</span>
-                                    <span class="impl_fea_name">2016</span></li>
-                                <li><span class="impl_fea_title">Color</span>
-                                    <span class="impl_fea_name">white</span></li>
-                            </ul>
-                            <div class="impl_fea_btn">
-                                <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--5-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="impl_fea_car_box">
-                        <div class="impl_fea_car_img">
-                            <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                            <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                            <span class="impl_img_tag" title="compare"><i class="fa fa-exchange" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="impl_fea_car_data">
-                            <h2><a href="purchase_used.html"> Realm</a></h2>
-                            <ul>
-                                <li><span class="impl_fea_title">model</span>
-                                    <span class="impl_fea_name">Realm 16.6</span></li>
-                                <li><span class="impl_fea_title">Vehicle Status</span>
-                                    <span class="impl_fea_name">old</span></li>
-                                <li><span class="impl_fea_title">year</span>
-                                    <span class="impl_fea_name">2015</span></li>
-                                <li><span class="impl_fea_title">Color</span>
-                                    <span class="impl_fea_name">black</span></li>
-                            </ul>
-                            <div class="impl_fea_btn">
-                                <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--6-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="impl_fea_car_box">
-                        <div class="impl_fea_car_img">
-                            <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                            <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                            <span class="impl_img_tag" title="compare"><i class="fa fa-exchange" aria-hidden="true"></i></span>
-                        </div>
-                        <div class="impl_fea_car_data">
-                            <h2><a href="purchase_used.html"> Empire</a></h2>
-                            <ul>
-                                <li><span class="impl_fea_title">model</span>
-                                    <span class="impl_fea_name">Empire Z06</span></li>
-                                <li><span class="impl_fea_title">Vehicle Status</span>
-                                    <span class="impl_fea_name">old</span></li>
-                                <li><span class="impl_fea_title">year</span>
-                                    <span class="impl_fea_name">2015</span></li>
-                                <li><span class="impl_fea_title">Color</span>
-                                    <span class="impl_fea_name">yellow</span></li>
-                            </ul>
-                            <div class="impl_fea_btn">
-                                <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!------ Counter Section Start ------>
     <div class="impl_counter_wrapper">
         <div class="container">

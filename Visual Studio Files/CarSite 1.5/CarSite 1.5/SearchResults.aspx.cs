@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace CarSite_1._5
 {
-    public partial class Home_Page : System.Web.UI.Page
+    public partial class SearchResultsaspx : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-        }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("SearchResults.aspx");
         }
     }
 }
