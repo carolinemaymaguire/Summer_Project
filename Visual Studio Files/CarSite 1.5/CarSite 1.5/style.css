@@ -2941,7 +2941,14 @@ p.impl_ser_para {
     border: none;
 }
 
-
+ .checkboxlist input {
+            font: inherit;
+            font-size: 0.875em; /* 14px / 16px */
+            color: #494949;
+            margin-bottom: 12px;
+            margin-top: 5px;
+            margin-right: 20px !important;
+    }
 .impl_category_type {
     float: right;
     padding-right: 15px;
