@@ -268,34 +268,48 @@
                                  
                                 </div>
                             </div>
+                             <!------ Purchase part section Start ------>
                             <div class="col-lg-9 col-md-8">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
-                                        <div class="impl_fea_car_box">
-                                            
-                                            <asp:GridView CssClass="table table-bordered shop_table cart" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="Datasrc">
-                                                <Columns>
-                                                    <asp:BoundField DataField="PartName" HeaderText="PartName" SortExpression="PartName" />
-                                                    <asp:BoundField DataField="PartDesc" HeaderText="PartDesc" SortExpression="PartDesc" />
-                                                    <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" />
-                                                </Columns>
-                                                <EditRowStyle BorderColor="Black" Wrap="False" />
-                                            </asp:GridView>
-                                            <asp:SqlDataSource ID="Datasrc" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [PartName], [PartDesc], [UnitPrice] FROM [Part]">
-                                            </asp:SqlDataSource>
-                                           
+                                                   <div class="impl_fea_car_box">
+
+                                        <asp:DataList ID="datalCategory" CssClass="DataWebControlStyle" runat="server" DataSourceID="datsrcCategory" RepeatLayout="Flow">
+                                            <ItemTemplate>
+                                                 <div class="impl_fea_car_img">
+                                                <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
+                                                <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
+                                                <span class="impl_img_tag" title="compare"><a href="compare.html"><i class="fa fa-exchange" aria-hidden="true"></i></a></span>
+                                         </div>
+                                               <div class="impl_fea_car_data">
+                                                   
+                                                    
+                                                <asp:Label ID="PartNameLabel" 
+                                                      runat="server" Text='<%# Eval("PartName") %>' Font-Size="Large" />
+                                                <br />
+                                                UnitPrice:
+                                                <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
+<br />
+                                                PartDesc:
+                                                <asp:Label ID="PartDescLabel" runat="server" Text='<%# Eval("PartDesc") %>' />
+                                               
+                                                   <div class="impl_fea_btn">
+                                                    <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
+                                               </div>
+                                               </div>  
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                                        <asp:SqlDataSource ID="datsrcCategory" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [PartName], [UnitPrice], [PartDesc] FROM [Part]"></asp:SqlDataSource>
                                     </div>
-                                    <!--pagination start-->
-                             
-                                    </div>
-                             
+                              </div> </div>
+                                  </div>
+                              </div> </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            
+  
     <!------ Footer Section Start ------>
     <div class="impl_footer_wrapper">
         <div class="impl_social_wrapper">
@@ -373,7 +387,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>            =
     <!----Bottom Footer Start---->
     <div class="impl_btm_footer">
         <div class="container">

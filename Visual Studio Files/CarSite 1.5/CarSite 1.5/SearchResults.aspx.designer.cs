@@ -40,21 +40,21 @@ namespace CarSite_1._5 {
         protected global::System.Web.UI.WebControls.SqlDataSource datasrcCategory;
         
         /// <summary>
-        /// GridView1 control.
+        /// datalCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.DataList datalCategory;
         
         /// <summary>
-        /// Datasrc control.
+        /// datsrcCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Datasrc;
+        protected global::System.Web.UI.WebControls.SqlDataSource datsrcCategory;
     }
 }

@@ -152,7 +152,9 @@ label,
 select,
 summary,
 textarea{-ms-touch-action:manipulation;touch-action:manipulation}
-table{border-collapse:collapse;background-color:transparent}
+table{border-collapse:collapse;background-color:transparent;
+    margin-right: 173px;
+}
 caption{padding-top:.75rem;padding-bottom:.75rem;color:#636c72;text-align:left;caption-side:bottom}
 th{text-align:left}
 label{display:inline-block;margin-bottom:.5rem}
