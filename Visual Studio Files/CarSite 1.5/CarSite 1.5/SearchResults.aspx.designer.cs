@@ -40,13 +40,13 @@ namespace CarSite_1._5 {
         protected global::System.Web.UI.WebControls.SqlDataSource datasrcCategory;
         
         /// <summary>
-        /// datalCategory control.
+        /// listviewTest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList datalCategory;
+        protected global::System.Web.UI.WebControls.ListView listviewTest;
         
         /// <summary>
         /// datsrcCategory control.
@@ -56,5 +56,14 @@ namespace CarSite_1._5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource datsrcCategory;
+        
+        /// <summary>
+        /// dataSearchPagnation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataPager dataSearchPagnation;
     }
 }

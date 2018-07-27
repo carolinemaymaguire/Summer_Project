@@ -252,7 +252,7 @@
                    
                 </div>
                 <div class="col-lg-6 col-md-6">
-                <h1><b>Select a Part</b></h1>
+               
                 </div>
                 <div class="col-lg-12 col-md-12">
                     <div class="impl_purchase_inner">
@@ -260,54 +260,86 @@
                             <div class="col-lg-3 col-md-4">
                                 <div class="impl_sidebar">
                                    
-                                           <h1>Category</h1>
                                         <p></p>
-                                       <asp:CheckBoxList CssClass="checkboxlist" ID="chkCategory" style="margin-right:5px" runat="server"  DataSourceID="datasrcCategory" DataTextField="CategoryName" DataValueField="CategoryName" Font-Size="Large"></asp:CheckBoxList>
-                                   &nbsp; <asp:SqlDataSource ID="datasrcCategory" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [CategoryName] FROM [Category]"></asp:SqlDataSource>
+                                       <asp:CheckBoxList CssClass="checkboxlist" ID="chkCategory" style="margin-right:5px" runat="server"  DataSourceID="datasrcCategory" DataTextField="CategoryName" DataValueField="CategoryName" Font-Size="Large" AutoPostBack="True"></asp:CheckBoxList>
+                                   &nbsp; <asp:SqlDataSource ID="datasrcCategory" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [CategoryName] FROM [Category]"></asp:SqlDataSource>
                                  
                                  
                                 </div>
                             </div>
                              <!------ Purchase part section Start ------>
-                            <div class="col-lg-9 col-md-8">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6">
-                                                   <div class="impl_fea_car_box">
-
-                                        <asp:DataList ID="datalCategory" CssClass="DataWebControlStyle" runat="server" DataSourceID="datsrcCategory" RepeatLayout="Flow">
-                                            <ItemTemplate>
-                                                 <div class="impl_fea_car_img">
-                                                <img src="http://via.placeholder.com/370x320" alt="" class="img-fluid impl_frst_car_img" />
-                                                <img src="http://via.placeholder.com/370x320/fff" alt="" class="img-fluid impl_hover_car_img" />
-                                                <span class="impl_img_tag" title="compare"><a href="compare.html"><i class="fa fa-exchange" aria-hidden="true"></i></a></span>
-                                         </div>
-                                               <div class="impl_fea_car_data">
-                                                   
+                            <div>
+                                <div>
+                                    <asp:ListView ID="listviewTest"  runat="server" DataSourceID="datsrcCategory" >
+                                         <ItemTemplate>
+                                             
+                                            
+                                               <div class="impl_fea_car_data" style="overflow:auto">
+                                                <div style="float:left">    <asp:Image ID="Image1" style="width:200px;"
+                                                        runat="server" ImageUrl='<%# Eval("PartPicture") %>' /></div>
                                                     
                                                 <asp:Label ID="PartNameLabel" 
                                                       runat="server" Text='<%# Eval("PartName") %>' Font-Size="Large" />
                                                 <br />
-                                                UnitPrice:
-                                                <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' />
+                                                   
+                                                   &nbsp;<br />
+                                                   <asp:Label ID="UnitPriceLabel" runat="server" Text='<%# Eval("UnitPrice") %>' /> <br />
 <br />
-                                                PartDesc:
-                                                <asp:Label ID="PartDescLabel" runat="server" Text='<%# Eval("PartDesc") %>' />
+                                                <asp:Label ID="PartDescLabel" runat="server" Text='<%# Eval("PartDesc") %>' /> <br />
                                                
+                                                  
+                                                <br /> <br />
                                                    <div class="impl_fea_btn">
-                                                    <button class="impl_btn"><span class="impl_doller">$ 72000 </span><span class="impl_bnw">buy now</span></button>
-                                               </div>
-                                               </div>  
-                                            </ItemTemplate>
-                                        </asp:DataList>
-                                        <asp:SqlDataSource ID="datsrcCategory" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [PartName], [UnitPrice], [PartDesc] FROM [Part]"></asp:SqlDataSource>
+                                                    
+
+                                                        </div> <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_g6do5S237ekq10r65BnxO6S0"
+    data-amount="999"
+    data-name="Stripe.com"
+    data-description="Example charge"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true">
+  </script>
+               
+                                               </div>                               </ItemTemplate>
+                                        </asp:ListView>
+                                                               
+                                   <div class="impl_social_wrapper" style="float:right">
+                                                    
+                                        <asp:SqlDataSource ID="datsrcCategory" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [PartName], [UnitPrice], [PartDesc], [PartPicture] FROM [Part]"></asp:SqlDataSource>
+                                    <asp:DataPager style="font-size:large"
+                                        ID="dataSearchPagnation" PagedControlID="listviewTest"
+                                        PageSize="3"
+                                        runat="server">
+                                     
+                                        <Fields>
+
+                                            <asp:NumericPagerField />
+                                           
+                                        </Fields>
+                                    </asp:DataPager>
+                         
+                                   
+                                        </div>
                                     </div>
-                              </div> </div>
-                                  </div>
-                              </div> </div>
+                              
                             </div>
                         </div>
                     </div>
-                </div>
+             
+            </div>
+                        </div>
+                
+             </div>
+                        
+                
+             
+        
+        
+            
+        
             
   
     <!------ Footer Section Start ------>
