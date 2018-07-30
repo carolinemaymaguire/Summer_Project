@@ -48,7 +48,9 @@ select{text-transform:none}
 [type=reset],
 [type=submit],
 button,
-html [type=button]{-webkit-appearance:button}
+html [type=button]{-webkit-appearance:button;
+    width: 18px;
+}
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner,
@@ -338,7 +340,9 @@ pre code{padding:0;font-size:inherit;color:inherit;background-color:transparent;
 .col-xl-6,
 .col-xl-7,
 .col-xl-8,
-.col-xl-9{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}
+.col-xl-9{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px;
+    margin-bottom: 0px;
+}
 @media (min-width:576px){.col,
 .col-1,
 .col-10,

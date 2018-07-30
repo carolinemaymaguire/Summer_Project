@@ -97,17 +97,7 @@
                                 </li>
                                 <li><a href="#signin" data-toggle="modal"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                             </ul>
-                            <div class="impl_search_overlay">
-                                <div class="impl_search_area">
-                                    <div class="srch_inner">
-                                        </div>
-                                            <input type="text" placeholder="Search here... ">
-                                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                        <div class="srch_close_btn">
-                                            <span class="srch_close_btn_icon"><i class="fa fa-times" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
+               
                             </div>
                         </div>
                     </div>
@@ -248,7 +238,7 @@
                     <div class="impl_sorting_text custom_select">
                        
                            
-                        </div>
+                        </div> </div>
                    
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -309,7 +299,7 @@
                                    <div class="impl_social_wrapper" style="float:right">
                                                     
                                         <asp:SqlDataSource ID="datsrcCategory" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT [PartName], [UnitPrice], [PartDesc], [PartPicture] FROM [Part]"></asp:SqlDataSource>
-                                    <asp:DataPager style="font-size:large"
+                                    <asp:DataPager 
                                         ID="dataSearchPagnation" PagedControlID="listviewTest"
                                         PageSize="3"
                                         runat="server">

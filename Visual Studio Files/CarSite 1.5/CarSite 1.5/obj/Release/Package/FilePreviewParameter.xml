@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ImpelScrapCars" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\S00174309\\Desktop\\GIT\ Hub\\Summer_Project\\Visual\ Studio\ Files\\CarSite\ 1\.5\\CarSite\ 1\.5\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\S00174309\\Desktop\\GIT\ Hub\\Summer_Project\\Visual\ Studio\ Files\\CarSite\ 1\.5\\CarSite\ 1\.5\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ScrapCarsSiteConnectionString-Web.config Connection String" description="ScrapCarsSiteConnectionString Connection String used in web.config by the application to access the database." value="Data Source=VLAB-HDIP-64;Initial Catalog=ScrapCarsSite;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\S00174309\\Desktop\\GIT\ Hub\\Summer_Project\\Visual\ Studio\ Files\\CarSite\ 1\.5\\CarSite\ 1\.5\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ScrapCarsSiteConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\S00174309\Desktop\GIT Hub\Summer_Project\Visual Studio Files\CarSite 1.5\CarSite 1.5\obj\Release\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Users\S00174309\Desktop\GIT Hub\Summer_Project\Visual Studio Files\CarSite 1.5\CarSite 1.5\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\S00174309\Desktop\GIT Hub\Summer_Project\Visual Studio Files\CarSite 1.5\CarSite 1.5\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

@@ -104,151 +104,18 @@ Purchase: http://themeforest.net/user/kamleshyadav
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#signin" data-toggle="modal"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                                <li><a href="signin.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                             </ul>
-                            <div class="impl_search_overlay">
-                                <div class="impl_search_area">
-                                    <div class="srch_inner">
-                                        </div>
-                                            <input type="text" placeholder="Search here... ">
-                                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                        <div class="srch_close_btn">
-                                            <span class="srch_close_btn_icon"><i class="fa fa-times" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
+                           
                                 </div>
-                            </div>
+                       
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--sign-in form-->
-        <div class="modal" id="signin">
-            <div class="impl_signin">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-                <div class="impl_sign_form">
-                    <h1>Sign In</h1>
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                        <span class="form_icon">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                        <span class="form_icon">
-					<i class="fa fa-lock" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <div class="forget_password">
-                        <div class="remember_checkbox">
-                            <label>Keep me signed in
-							<input type="checkbox">
-							<span class="checkmark"></span>
-						</label>
-                        </div>
-                        <a href="#">Forgot Password ?</a>
-                    </div>
-                    <a href="#" class="impl_btn">submit</a>
-                    <p>Dont Have An Account? <a class="impl_modal" href="#signup" data-toggle="modal">Sign Up</a></p>
-                </div>
-                <div class="impl_sign_img">
-                    <h2>Welcome To Impel Cars</h2>
-                    <p>A Perfect Zone To Sell And Purchase Cars</p>
-                    <div class="impl_sign_bottom">
-                        <h3>It’s Not Just A Car </h3>
-                        <h3>It’s Someone’s Dream</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--sign-up form-->
-        <div class="modal" id="signup">
-            <div class="impl_signin">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">×</span>
-			</button>
-                <div class="impl_sign_form">
-                    <h1>Sign up</h1>
-                    <div class="form-group">
-                        <input type="text" placeholder="Username" class="form-control">
-                        <span class="form_icon">
-						<i class="fa fa-user" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                        <span class="form_icon">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                        <span class="form_icon">
-					<i class="fa fa-lock" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Confirm Password" class="form-control">
-                        <span class="form_icon">
-					<i class="fa fa-lock" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <a href="#" class="impl_btn">sign up</a>
-                    <p>Already Have An Account? <a href="#signup" data-toggle="modal">Sign In</a></p>
-                </div>
-                <div class="impl_sign_img">
-                    <h2>Welcome To Impel Cars</h2>
-                    <p>A Perfect Zone To Sell And Purchase Cars</p>
-                    <div class="impl_sign_bottom">
-                        <h3>It’s Not Just A Car </h3>
-                        <h3>It’s Someone’s Dream</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--menu start-->
-        <div class="impl_menu_wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="impl_logo">
-                            <a href="home_page.aspx"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
-                        </div>
-                        <button class="impl_menu_btn">
-			<i class="fa fa-car" aria-hidden="true"></i>
-			<i class="fa fa-bars" aria-hidden="true"></i>
-		</button>
-                        <div class="impl_menu_inner">
-                            <div class="impl_logo_responsive">
-                                <a href="index.html"><img src="logo1.png" alt="Logo" class="img-fluid"></a>
-                            </div>
-                            
-                            <div class="impl_menu">
-                                <nav>
-                                    <div class="menu_cross">
-                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                    </div>
-                                    <ul>
-                                                                  <li><a href="services.aspx">services</a></li>
-                                        <li><a href="blog.aspx">blog</a>
-                                         
-                                        </li>
-                                         <li><a href="about.aspx">About</a></li>
-
-                                        <li><a href="contact.aspx">Contact us</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-  
+     
+        
     <!------ Search Box Start ------>
     <div class="impl_searchbox_wrapper impl_home_searchbox">
         <div class="container">
@@ -257,7 +124,9 @@ Purchase: http://themeforest.net/user/kamleshyadav
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div class="impl_search_box   custom_select">
-                                <h1>Find a Part</h1>
+                                <h1>
+                                  
+                                    Find a Part</h1>
                          
                                 <asp:DropDownList ID="ddlMake" runat="server" AutoPostBack="True" DataSourceID="datasrcMake" DataTextField="Vehicle_Make" DataValueField="Vehicle_Make"></asp:DropDownList>
                                 <asp:SqlDataSource ID="datasrcMake" runat="server" ConnectionString="<%$ ConnectionStrings:ScrapCarsSiteConnectionString %>" SelectCommand="SELECT DISTINCT [Vehicle_Make] FROM [Model]"></asp:SqlDataSource>
@@ -607,13 +476,6 @@ src="https://www.youtube.com/embed/BqjuObIH1nY" />
             </div>
 
             <div class="impl_btm_footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <p class="impl_copyright">Copyright &copy; 2018 Impel Car Dealers. All Rights Reserved</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

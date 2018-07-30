@@ -1229,6 +1229,8 @@ p.slogan strong {
     padding: 0px 15px;
     height: 50px;
     line-height: 50px;
+    top: 0px;
+    left: 0px;
 }
 .impl_search_btn .impl_btn:after {
     background-color: #151515;
@@ -2113,6 +2115,8 @@ h1.impl_foo_title {
     list-style: none;
     padding-bottom: 10px;
     position: relative;
+    top: -30px;
+    left: 0px;
 }
 .impl_foo_box ul li a:hover {
     color: #f15b5b;
@@ -2302,6 +2306,7 @@ p.impl_copyright {
 .impl_searchbox_wrapper.impl_home_searchbox .price_range {
     padding: 0px 15px;
     width: 100%;
+    left: 0px;
 }
 .impl_searchbox_wrapper.impl_home_searchbox .irs-line-mid {
     left: 0;
