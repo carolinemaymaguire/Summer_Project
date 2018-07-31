@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signin.aspx.cs" Inherits="CarSite_1._5.Signin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="CarSite_1._5.SignUp" %>
 
 <!DOCTYPE html>
 <!-- 
@@ -47,7 +47,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
       
           
                 <div class="impl_sign_form" style="margin-top:20px;">
-                    <h1>Sign In</h1>
+                    <h1>Sign Up</h1>
                     <div class="form-group">
     
        <asp:TextBox ID="tbxUsername" runat="server" Text="Username" CssClass="form-control"></asp:TextBox>
@@ -62,16 +62,12 @@ Purchase: http://themeforest.net/user/kamleshyadav
 					<i class="fa fa-lock" aria-hidden="true"></i>
 					</span>
                     </div>
-                    <div class="forget_password">
-                   
-                        <a href="ForgotPassword.aspx">Forgot Password ?</a>
-                    </div>
-             <asp:Button ID="BtnSubmit" runat="server" CssClass="btn impl_btn" Text="Sign In" OnClick="BtnSubmit_Click" Height="37px" Width="129px" />
+               
+             <asp:Button ID="BtnSubmit" runat="server" CssClass="btn impl_btn" Text="Sign Up" Height="37px" Width="129px" />
                 
         <asp:Label ID="lblSuccessFail" runat="server" Text=""></asp:Label>
 
       
-                    <p>Dont Have An Account? <a href="SignUp.aspx">Sign Up</a></p>
            </div>
                 <div class="impl_sign_img" style="background-image:url(Sign_in_Page.jpg);";>
                

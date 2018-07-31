@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signin.aspx.cs" Inherits="CarSite_1._5.Signin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="CarSite_1._5.ForgotPassword" %>
 
 <!DOCTYPE html>
 <!-- 
@@ -47,31 +47,28 @@ Purchase: http://themeforest.net/user/kamleshyadav
       
           
                 <div class="impl_sign_form" style="margin-top:20px;">
-                    <h1>Sign In</h1>
+                    <h1>Enter your email address:</h1>
+                 
                     <div class="form-group">
+                        <br />
     
-       <asp:TextBox ID="tbxUsername" runat="server" Text="Username" CssClass="form-control"></asp:TextBox>
+       <asp:TextBox ID="tbxUsername" runat="server" Text="Email Address" CssClass="form-control"></asp:TextBox>
                      <span class="form_icon">
 						<i class="fa fa-envelope" aria-hidden="true"></i>
 					</span>
                     </div>
-                    <div class="form-group">
-                        
-                        <asp:TextBox ID="tbxPassword" CssClass="form-control"  Text="Password" runat="server"></asp:TextBox>
-                        <span class="form_icon">
-					<i class="fa fa-lock" aria-hidden="true"></i>
-					</span>
-                    </div>
-                    <div class="forget_password">
-                   
-                        <a href="ForgotPassword.aspx">Forgot Password ?</a>
-                    </div>
-             <asp:Button ID="BtnSubmit" runat="server" CssClass="btn impl_btn" Text="Sign In" OnClick="BtnSubmit_Click" Height="37px" Width="129px" />
+
+               
+             <asp:Button ID="BtnSubmit" runat="server" CssClass="btn impl_btn" Width="200px" Text="Recover Password" Height="37px" OnClick="BtnSubmit_Click" />
                 
-        <asp:Label ID="lblSuccessFail" runat="server" Text=""></asp:Label>
+       
 
       
-                    <p>Dont Have An Account? <a href="SignUp.aspx">Sign Up</a></p>
+                    <asp:Label ID="lblmessage" runat="server" Text=""></asp:Label>
+                
+       
+
+      
            </div>
                 <div class="impl_sign_img" style="background-image:url(Sign_in_Page.jpg);";>
                
@@ -105,3 +102,4 @@ Purchase: http://themeforest.net/user/kamleshyadav
     </form>
 </body>
 </html>
+

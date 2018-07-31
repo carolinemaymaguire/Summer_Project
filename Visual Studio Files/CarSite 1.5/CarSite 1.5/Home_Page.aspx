@@ -177,22 +177,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                             </div>
                         </div>
                         <!--about info-->
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                     <!-- Wrapper for slides -->
-                     <div class="carousel-inner">
-                     <div class="item active">
-                     <img src="spanner_image.jpg" alt="Scrap" style="width:600px; height:420px">
-                    </div>
-                     <div class="item">
-                
-                           <img src="carrepair_cm.jpg" alt="Scrap" style="width:600px; height:420px">
-                   </div>
-    
-                   
-  
-                            </div>
-                        </div>
-
+                    
                             <!-------->
                                   
                          </div>
